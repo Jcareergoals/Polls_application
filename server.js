@@ -14,14 +14,14 @@ app.use(session({secret:"Mean Belt Exam 2nd attempt"}));
 
 mongoose.connect('mongodb://localhost/mean_belt'); 
 
-var _Schema = new mongoose.Schema({
+// var _Schema = new mongoose.Schema({
 
-}); 
+// }); 
 
-mongoose.model('_', _Schema); 
+// mongoose.model('_', _Schema); 
 
 // routes 
-app 
+// app 
 	// .get('/', function(req, res){
 
 	// }); 

@@ -1,6 +1,9 @@
 {
-	"name":"Mean Belt Exam 2", 
-	"dependencies":{
-		
-	}
+  "name": "Mean Belt Exam 2",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "mongoose": "^4.4.14"
+  }
 }
