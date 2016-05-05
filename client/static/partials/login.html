@@ -1,0 +1,19 @@
+<!-- LOGIN PARTIAL --> 
+<div class="col-xs-12" ng-controller='login'>
+	<h3 class='col-xs-12'>Welcome to <span class='polls'>The Polls</span></h3>
+	<form name='frm'>
+		<div class="form-group col-xs-8">
+			<label for='name' class='col-xs-3 control-label'>Your Name:</label>
+			<div class="col-xs-8">
+				<input type='text' id='name' class='form-control' name='name' ng-model='session.Name' required ng-minlength='3'>
+			</div>
+		</div>
+		<span ng-show='frm.name.$dirty && frm.name.$error.required'>Name is required</span>
+		<span ng-show='frm.name.$dirty && frm.name.$error.minlength'>Too short</span>
+		<div class="form-group col-xs-11">
+			<div class="col-xs-8">
+				<button type='submit' class='btn btn-default col-xs-offset-10' ng-disabled='frm.$invalid' ng-click='login()'>Enter</button>
+			</div>
+		</div>
+	</form>
+</div>

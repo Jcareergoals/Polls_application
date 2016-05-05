@@ -21,10 +21,16 @@ mongoose.connect('mongodb://localhost/mean_belt');
 // mongoose.model('_', _Schema); 
 
 // routes 
-// app 
-	// .get('/', function(req, res){
-
-	// }); 
+app 
+	.post('/session', function(req, res){
+		console.log(req.body)
+		if(req.body.Name){
+			req.session.name = req.body.Name
+			res.json({status:'success'})
+		} else {
+			res.json({status:'error'})
+		}
+	})
 
 app.listen(8000, function(){
 	console.log('listening at port: 8000'); 
