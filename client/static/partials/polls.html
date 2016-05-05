@@ -1,0 +1,40 @@
+<div class="col-xs-12" ng-controller='polls'>
+	<div class="row">
+		<a href='#/dashboard'class="col-xs-2 col-xs-offset-10">Go to Polls</a>
+	</div>
+	<div class="row">
+		<div class="col-xs-12"> <!-- This div is only needed for padding & maring alignment--> 
+			<h3 class='col-xs-12'>{{ survey.question }}</h3>
+			<label class='col-xs-12'>Click the Vote button to choose one</label>
+		</div>
+	</div>
+	<div class="col-xs-8 poll_table">
+		<table class='table table-bordered table-striped table-hover'>
+			<tr>
+				<th class='col-xs-3'>Option</th>
+				<th>Current Count of Votes</th>
+				<th class='col-xs-1'>Action</th>
+			</tr>
+			<tr>
+				<td>{{ survey.option_1.name }}</td>
+				<td>{{ survey.option_1.count }}</td>
+				<td><button class='btn btn-primary' ng-click='vote(1)'>Vote</button></td>
+			</tr>
+			<tr>
+				<td>{{ survey.option_2.name }}</td>
+				<td>{{ survey.option_2.count }}</td>
+				<td><button class='btn btn-primary' ng-click='vote(2)'>Vote</button></td>
+			</tr>
+			<tr>
+				<td>{{ survey.option_3.name }}</td>
+				<td>{{ survey.option_3.count }}</td>
+				<td><button class='btn btn-primary' ng-click='vote(3)'>Vote</button></td>
+			</tr>
+			<tr>
+				<td>{{ survey.option_4.name }}</td>
+				<td>{{ survey.option_4.count }}</td>
+				<td><button class='btn btn-primary' ng-click='vote(4)'>Vote</button></td>
+			</tr>
+		</table>
+	</div>
+</div>

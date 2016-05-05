@@ -24,11 +24,11 @@
 						<th class='col-xs-3'>Date Posted</th>
 						<th class='col-xs-2'>Action</th>
 					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td><a href="">Delete</a></td>
+					<tr ng-repeat='poll in polls | filter:filter_name'>
+						<td>{{ poll.created_by }}</td>
+						<td><a href="#/poll/{{ poll._id }}">{{ poll.question }}</a></td>
+						<td>{{ poll.date | date: 'fullDate' }}</td>
+						<td><button class='btn btn-danger' ng-click='delete({ id:poll._id, created_by:poll.created_by })'>Delete</button></td>
 					</tr>
 				</table>
 			</div>
